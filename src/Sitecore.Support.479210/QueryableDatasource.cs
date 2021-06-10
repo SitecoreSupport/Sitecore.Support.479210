@@ -24,6 +24,11 @@ namespace Sitecore.XA.Foundation.LocalDatasources.Pipelines.ResolveRenderingData
                 Item contextItem = args.GetContextItem();
                 if (contextItem != null)
                 {
+                    if (!ServiceLocator.ServiceProvider.GetService<IContext>().Site.IsSxaSite())
+                    {
+                        return;
+                    }
+
                     string query = TokenResolver.Resolve(args.Datasource, contextItem);
                     Item[] queryItems = contextItem.SelectItemsWithLanguage(query);
                     ListString itemIds = new ListString(queryItems.Select(i => i.ID.ToString()).ToList());
