@@ -11,7 +11,7 @@ using Sitecore.XA.Foundation.Multisite.Extensions;
 using Sitecore.XA.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.XA.Foundation.TokenResolution;
 
-namespace Sitecore.XA.Foundation.LocalDatasources.Pipelines.ResolveRenderingDatasource
+namespace Sitecore.Support.XA.Foundation.LocalDatasources.Pipelines.ResolveRenderingDatasource
 {
     public class QueryableDatasource
     {
